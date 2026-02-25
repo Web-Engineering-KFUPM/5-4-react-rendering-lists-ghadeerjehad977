@@ -9,10 +9,10 @@ export default function TaskItem({ task, onToggle, onDelete }) {
             Also make it reflect task.isDone using checked={task.isDone} */}
         <input type="checkbox" 
         checked= {task.isDone}
-      onChange = {() => onToggle(task.id)}/>
+        onChange = {() => onToggle(task.id)}/>
 
         
-              {!task.isDone && <DueBadge dueDate={task.dueDate} />} 
+         {!task.isDone && <DueBadge dueDate={task.dueDate} />} 
               
 
         {/* TODO (TASK 2): Display the task title
@@ -22,9 +22,8 @@ export default function TaskItem({ task, onToggle, onDelete }) {
       </label>
 
       {/* TODO (TASK 4): Delete button calls onDelete(task.id) on click */}
-      <button className="ghost" aria-label="Delete task">
-        area-label = "Delete task"
-        onClick = {() => onDelete (task.id)}
+      <button className="ghost" aria-label="Delete task" onClick = {() => onDelete (task.id)}>
+        
         
         ✕
       </button>

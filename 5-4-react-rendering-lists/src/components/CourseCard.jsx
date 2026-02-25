@@ -30,20 +30,12 @@ export default function CourseCard({ course, index, onMutateCourse }) {
     <article className="course card">
       <header className="cardHeader">
         <h2>{course.title}</h2>
-
-        {/* TODO (TASK 3): Show “All caught up” badge ONLY when:
-            - course has tasks AND
-            - all tasks are done
-            Use logical && */
-            
-            
-        }
+        
          {allDone && <span className="badge">All caught up</span>}
       </header>
 
       <section className="tasksSection">
-
-        {tasks.length ===0 && <p>No Tasks yet.</p>}
+        {course.tasks.length ===0 && (<p className="muted">No Tasks yet.</p>)}
         
         <ul className="tasks">
           {/* TODO (TASK 2): Render tasks using course.tasks.map(...)
